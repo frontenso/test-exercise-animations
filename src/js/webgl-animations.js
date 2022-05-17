@@ -11,8 +11,8 @@ const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
 const material = new THREE.MeshBasicMaterial();
 material.color = new THREE.Color('#444');
 
-const sphere = new THREE.Mesh(geometry, material);
-scene.add(sphere);
+const torus = new THREE.Mesh(geometry, material);
+scene.add(torus);
 
 const sizes = {
   width: window.innerWidth,
@@ -52,7 +52,7 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  sphere.rotation.y = 0.5 * elapsedTime;
+  torus.rotation.y = 0.5 * elapsedTime;
 
   renderer.render(scene, camera);
 
